@@ -1,0 +1,23 @@
+.Navbar{
+  background: rgb(253,235,231);
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 7px 7px 7px rgb(216, 208, 206)
+}
+
+.Navbar ul {
+  width: 30%;
+  position: absolute;
+  right: 0.5em;
+}
+
+.Navbar ul li{
+  width: 45%;
+  height: 100%;
+  margin: 0 2.5%;
+  text-align: center;
+}
+
+.Navbar ul li:hover{
+  background: rgb(220,203,199)
+}
