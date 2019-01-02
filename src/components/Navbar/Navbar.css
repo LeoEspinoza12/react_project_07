@@ -2,7 +2,8 @@
   background: rgb(253,235,231);
   margin: 20px auto;
   border-radius: 5px;
-  box-shadow: 7px 7px 7px rgb(216, 208, 206)
+  /* box-shadow: 7px 7px 7px rgb(216, 208, 206); */
+  box-shadow: 7px 7px 7px rgb(130,130,130)
 }
 
 .Navbar ul {

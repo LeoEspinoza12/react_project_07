@@ -1,5 +1,6 @@
 .Greeting{
-  background: rgb(253,235,231)
+  background: rgb(253,235,231);
+  box-shadow: 7px 7px 7px rgb(130,130,130)
 }
 
 .Greeting p a:nth-child(1){

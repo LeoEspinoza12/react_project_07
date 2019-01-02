@@ -1,0 +1,25 @@
+
+.LessonsTopic{
+  height: 70%;
+  margin: 2% 0;
+  width: 100%;
+  border: none
+}
+
+.LessonsTopic:hover{
+  background: rgb(245,245,245);
+
+}
+
+
+.LessonsTopic h5{
+  font-size: 1em
+}
+
+.LessonsTopic p {
+  font-size: 0.85em
+}
+
+.LessonsTopic a {
+  font-size: 0.9em
+}

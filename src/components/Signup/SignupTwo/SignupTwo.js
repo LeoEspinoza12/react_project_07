@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Fragment from '../../../UI/Fragment'
+import {Link} from 'react-router-dom'
 import './SignupTwo.css'
 
 const SignupTwo = (props) => {
@@ -10,28 +11,31 @@ const SignupTwo = (props) => {
   return (
     <Fragment>
       <div className='container SignupTwo'>
-        <div class="form-group">
+        <h3>Account Address</h3>
+        <div className="form-group">
           <label>Street #</label>
           <input
             type="text" 
-            class="form-control" 
+            className="form-control" 
             placeholder="Street #" />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label>City Name</label>
           <input
             type="text" 
-            class="form-control" 
+            className="form-control" 
             placeholder="City Name" />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label>State</label>
           <input
             type="text" 
-            class="form-control"
+            className="form-control"
             placeholder="State" />
         </div>
-        <button type="submit" class="btn-sm btn-primary">Submit</button>
+        <Link to='/'>
+          <button type="submit" className="btn-sm btn-primary">Submit</button>
+        </Link>
       </div>
     </Fragment>
   )

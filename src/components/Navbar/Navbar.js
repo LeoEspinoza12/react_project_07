@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './Navbar.css'
 import Fragment from '../../UI/Fragment'
 
@@ -7,13 +8,19 @@ const Navbar = () => {
     <Fragment>
       <nav className="navbar navbar-expand-lg navbar-light Navbar">
         <div className="collapse navbar-collapse">
-          <a className="navbar-brand" href="/">Language App</a>
+          <Link
+            className="navbar-brand"
+            to='/'>Language App</Link>
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="/">Signup</a>
+              <Link 
+                className="nav-link" 
+                to='/sign-up'>Signup</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">Lessons</a>
+              <Link 
+                className="nav-link" 
+                to='/lessons'>Lessons</Link>
             </li>
           </ul>
         </div>

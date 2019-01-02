@@ -6,7 +6,11 @@
   padding: 2.5em;
   background: rgb(253, 235, 231);
   border-radius: 5px;
-  box-shadow: 10px 10px 10px rgb(216, 208, 206)
+  box-shadow: 7px 7px 7px rgb(130, 130, 130)
+}
+
+.SignupTwo h3 {
+  text-align: center
 }
 
 .SignupTwo div label{
@@ -14,7 +18,7 @@
 }
 .SignupTwo div input {
   font-size: 0.9em;
-  box-shadow: 3px 3px rgb(216, 208, 206)
+  box-shadow: 3px 3px 3px rgb(130, 130, 130)
 }
 
 .SignupTwo small{
