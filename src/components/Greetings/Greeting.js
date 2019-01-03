@@ -8,7 +8,7 @@ const Greeting = () => {
 return (
   <Fragment>
     <div className="jumbotron Greeting">
-      <h1 className="display-4">Welcome to your App</h1>
+      <h1 className="display-4">Welcome to Language App</h1>
         <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quae qui dolorum deserunt quas reiciendis eaque repellat, cum fugit quia vitae rerum architecto aperiam laborum non sit praesentium beatae quam?</p>
         <hr className="my-4" />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aperiam porro tempore ipsam inventore voluptatum saepe facilis vitae, est eaque?</p>

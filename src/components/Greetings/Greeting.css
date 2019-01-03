@@ -1,13 +1,29 @@
 .Greeting{
+  margin-top: 50px;
   background: rgb(253,235,231);
   box-shadow: 7px 7px 7px rgb(130,130,130)
 }
 
+.Greeting h1{
+  font-size: 3em;
+  width: 90%;
+  margin: 0 auto;
+  /* background: red */
+}
+
+.Greeting p, .Greeting hr {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1em
+}
+
 .Greeting p a:nth-child(1){
   margin-left: 30px;
+  margin-top: 20px;
   width: 130px
 }
 .Greeting p a:nth-child(2) {
   margin-right: 30px;
+  margin-top: 20px;
   width: 130px
 }

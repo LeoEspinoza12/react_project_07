@@ -1,22 +1,38 @@
 import React from 'react'
 import Fragment from '../../../../UI/Fragment'
+import languageData from '../../../../UI/Language'
 
 import './LessonsTopic.css'
 
 const LessonsTopic = (props) => {
 
+  
+  let lessonsItems = null;
+
+  if(props.topic){
+    lessonsItems = <Fragment>
+              <div className="card-header">{props.topic.featured}</div>
+                <div className="card-body">
+                  <h5 className="card-title">
+                    {props.topic.title}</h5>
+                  <p className="card-text">
+                    {props.topic.topic}</p>
+                  <a href="/" className="btn-sm btn-primary">     
+                  {props.topic.home}</a>
+                </div>
+              </Fragment>
+  } else {
+    let description = languageData(props.lang)[0]
+    lessonsItems = <div className="page-header">
+                    <h1>{description.header}</h1>
+                      <p>{description.description}</p>
+                   </div>
+  }
 
   return (
     <Fragment>
       <div className="card LessonsTopic">
-        <div className="card-header">
-          Featured
-        </div>
-        <div className="card-body">
-          <h5 className="card-title">Lesson One</h5>
-          <p className="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, quas in. Explicabo tempore, debitis atque dolorum minima dolores accusantium velit! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, eius consequatur ipsum vel quia nostrum inventore dolor, officiis voluptate perspiciatis illum mollitia fuga. Sint optio, ea similique atque sed nihil?</p>
-          <a href="/" className="btn-sm btn-primary">Go somewhere</a>
-        </div>
+        {lessonsItems}
       </div>
     </Fragment>
   )

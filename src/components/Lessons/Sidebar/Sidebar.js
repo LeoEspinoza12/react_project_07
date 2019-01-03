@@ -8,10 +8,8 @@ class Sidebar extends Component {
 click=(lang)=>{
   this.props.history.push('/lessons/' + lang)
 }
-
 render(){
 
-  
   let lang = this.props.lang.map((lang, i)=>{
       if(lang === 'Home'){
         return <li className="list-group-item" key={i}>
@@ -24,7 +22,6 @@ render(){
                 onClick={()=>this.click(lang)}>{lang}
               </li>
     })
-    
     return (
       <Fragment>
         <div className="col-sm-4 Sidebar">

@@ -5,16 +5,23 @@ import './LessonsNav.css'
 
 const LessonsNav = (props) => {
 
-  let lang = props.lang
+  let dataItems = languageData(props.lang)
+  let topics = dataItems[1].map((item, i)=>{
+      return (
+          <li 
+            className="list-group-item"
+            key={i}
+            onClick={()=>props.click(props.lang, i)}>{item.lessons}</li>
+      )
+  })
+        
 
-
+        
   return (
     <Fragment>
-     <div className="list-group LessonsNav">
+      <div className="list-group LessonsNav">
         <ul>
-          <li className="list-group-item">Lesson One</li>
-          <li className="list-group-item">Lesson Two</li>
-          <li className="list-group-item">Lesson Three</li>
+          {topics}
         </ul>
       </div>
     </Fragment>
