@@ -27,6 +27,10 @@ class Body extends Component {
     this.setState({topic: null})
   }
   render(){
+    let sampleData = new URLSearchParams(decodeURIComponent(this.props.location.search))
+      for (let i of sampleData.entries()){
+        console.log(i)
+      }
     let lang = this.props.match.params
     let body = null
     if(this.props.match.path === '/lessons/:lang'){

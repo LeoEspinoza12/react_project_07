@@ -6,8 +6,25 @@ import './Sidebar.css'
 class Sidebar extends Component {
 
 click=(lang)=>{
-  this.props.history.push('/lessons/' + lang)
-}
+  let queryParms = []
+  let fruits = {
+    title: 'apple',
+    samp: 'platano',
+    specimen: 'naranja'
+  }
+
+  let sample =[]
+  for (let i in fruits){
+    sample.push(encodeURIComponent(i)+'='+encodeURIComponent(fruits[i]))
+    
+  }
+  queryParms = sample.join('&')
+  let anotherQueryParams = encodeURIComponent(queryParms)
+  this.props.history.push({
+    pathname: '/lessons/' + lang,
+    search: '?' + anotherQueryParams
+})}
+
 render(){
 
   let lang = this.props.lang.map((lang, i)=>{

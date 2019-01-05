@@ -22,3 +22,8 @@
 .Navbar ul li:hover{
   background: rgb(220,203,199)
 }
+
+.Navbar ul li a.active{
+  border-radius: 3px;
+  background: rgb(190,190,190)
+}
