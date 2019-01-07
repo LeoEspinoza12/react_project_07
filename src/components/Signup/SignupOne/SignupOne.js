@@ -59,7 +59,7 @@ class Signup extends Component {
 
 
 submitHandler = (e) =>{
-  console.log(this.props)
+  // console.log(this.props)
   e.preventDefault()
   this.props.history.push('/sign-up/address')
 }

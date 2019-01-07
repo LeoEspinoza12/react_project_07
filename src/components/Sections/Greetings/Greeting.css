@@ -11,6 +11,10 @@
   /* background: red */
 }
 
+.Greeting .intro{
+  margin-top: 20px
+}
+
 .Greeting p, .Greeting hr {
   width: 90%;
   margin: 0 auto;

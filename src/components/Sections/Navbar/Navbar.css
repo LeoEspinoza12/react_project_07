@@ -27,3 +27,10 @@
   border-radius: 3px;
   background: rgb(190,190,190)
 }
+
+@media screen and (max-width: 990px){
+ .Navbar ul {
+  position: relative;
+  left: 2em
+ }
+}

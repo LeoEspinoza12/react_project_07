@@ -16,7 +16,6 @@ click=(lang)=>{
   let sample =[]
   for (let i in fruits){
     sample.push(encodeURIComponent(i)+'='+encodeURIComponent(fruits[i]))
-    
   }
   queryParms = sample.join('&')
   let anotherQueryParams = encodeURIComponent(queryParms)
@@ -25,30 +24,30 @@ click=(lang)=>{
     search: '?' + anotherQueryParams
 })}
 
-render(){
+  render(){
 
-  let lang = this.props.lang.map((lang, i)=>{
-      if(lang === 'Home'){
-        return <li className="list-group-item" key={i}>
-                  <Link to='/'>{lang}</Link>
+    let lang = this.props.lang.map((lang, i)=>{
+        if(lang === 'Home'){
+          return <li className="list-group-item" key={i}>
+                    <Link to='/'>{lang}</Link>
+                  </li>
+        }
+        return  <li 
+                  className="list-group-item" 
+                  key={i}
+                  onClick={()=>this.click(lang)}>{lang}
                 </li>
-      }
-      return  <li 
-                className="list-group-item" 
-                key={i}
-                onClick={()=>this.click(lang)}>{lang}
-              </li>
-    })
-    return (
-      <Fragment>
-        <div className="col-sm-4 Sidebar">
-          <ul className="list-group">
-            {lang}
-          </ul>
-        </div>
-    </Fragment>
-  )
-}
+      })
+      return (
+        <Fragment>
+          <div className="col-sm-4 Sidebar">
+            <ul className="list-group">
+              {lang}
+            </ul>
+          </div>
+      </Fragment>
+    )
+  }
 }
 
 export default withRouter(Sidebar)

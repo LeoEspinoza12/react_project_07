@@ -1,0 +1,15 @@
+.InputCounter {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1em
+}
+
+.InputCounter input,
+.InputCounter select,
+.InputCounter button {
+  font-size: 0.85em
+}
+
+.InputCounter button {
+  width: 100%;
+}
