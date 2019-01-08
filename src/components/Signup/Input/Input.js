@@ -1,6 +1,6 @@
 import React from 'react'
 import Fragment from '../../../UI/Fragment'
-import message from '../../../UI/Message'
+import {message} from '../../../UI/Utils'
 import './Input.css'
 
 const Input = (props) => {

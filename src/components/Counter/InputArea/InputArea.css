@@ -13,3 +13,15 @@
 .InputCounter button {
   width: 100%;
 }
+
+.InputCounter button:disabled {
+  background: rgb(210,210,210);
+  border: 2px solid rgb(170,170,170)
+}
+
+.InputCounter small {
+  font-size: 0.65em;
+  color: rgb(245, 28, 28) !important;
+  font-weight: 700;
+  margin-bottom: 0 !important;
+}

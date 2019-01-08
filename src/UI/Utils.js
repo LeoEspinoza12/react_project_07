@@ -1,4 +1,4 @@
-const Message = (input, valid) => {
+export const message = (input, valid) => {
 
     let message = null
       switch(input.toLowerCase()){
@@ -23,4 +23,11 @@ const Message = (input, valid) => {
     return message
 }
 
-export default Message
+
+export const buttonSwitchHandler = (value) => {
+  
+    const checkifTrue = (val) => {
+      return val === true
+    }
+    return !value.every(checkifTrue)
+  }
