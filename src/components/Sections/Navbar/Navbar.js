@@ -29,7 +29,7 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink 
                 className="nav-link" 
-                to='/counter'>Counter</NavLink>
+                to='/lists'>Lists</NavLink>
             </li>
           </ul>
         </div>

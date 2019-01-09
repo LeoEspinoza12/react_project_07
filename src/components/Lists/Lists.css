@@ -1,0 +1,30 @@
+
+.Counter {
+  margin-top: 3em;
+  width: 100%;
+  border-radius: 5px;
+  background: rgb(253, 235, 231);
+  box-shadow: 7px 7px 7px rgb(130, 130, 130);
+  height: 35em;
+}
+
+
+.ContriLists{
+  background:rgb(240, 240, 240);
+  width: 90%;
+  margin: 0 auto;
+  margin-top: .85em;
+  height: 80%;
+}
+
+.ContriLists div{
+  width: 95%;
+  margin: 0 auto
+}
+
+.ContriLists div p{
+  width: 80%;
+  margin: 0.6em auto;
+  font-size: 1.25em
+}
+

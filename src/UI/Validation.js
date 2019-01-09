@@ -27,8 +27,20 @@ const Validation = (value, inputItem) => {
         break;
     case ('amount'):
       let val = String(value)
-      val.length >= 4 ? valid=numeral(val).format('0,0') : valid=val
+      val ? valid=numeral(val).format('0,0') : valid=val
       break;
+    case('sampstate'):
+      const entry = value
+      for (let key in entry) {
+        if (key === 'nameEntered' || key === 'amountEntered') {
+          entry[key].value = ''
+          entry[key].valid = false
+        } else {
+          entry.disabled = true
+        }
+      }
+      valid = entry
+        break;
     default: 
       return null
   }

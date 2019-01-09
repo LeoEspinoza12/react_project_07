@@ -30,4 +30,23 @@ export const buttonSwitchHandler = (value) => {
       return val === true
     }
     return !value.every(checkifTrue)
+}
+
+export const updateObject = (oldObject, newObject) => {
+  return {
+    ...oldObject,
+    ...newObject
   }
+}
+
+export const updateTotals = (originalObject) => {
+  let total = originalObject
+  let totalAmount = null
+  let persons = null
+  for (let key in total) {
+    totalAmount += Number(total[key].amount)
+    persons += 1
+  }
+
+  return { amount: totalAmount, persons: persons }
+}

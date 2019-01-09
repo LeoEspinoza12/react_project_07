@@ -7,7 +7,7 @@ import Greeting from '../components/Sections/Greetings/Greeting'
 import SignupOne from '../components/Signup/SignupOne/SignupOne'
 import SignupTwo from '../components/Signup/SignupTwo/SignupTwo'
 import Lessons from '../components/Lessons/Lessons'
-import Counter from '../components/Counter/Counter'
+import Lists from '../components/Lists/Lists'
 
 class Main extends Component {
 
@@ -20,7 +20,7 @@ class Main extends Component {
         <Switch>
           <Route path='/sign-up/address' component={SignupTwo}/>
           <Route path='/lessons' component={Lessons}/>
-          <Route path='/counter' component={Counter}/>
+          <Route path='/lists' component={Lists}/>
           <Route path='/sign-up' component={SignupOne}/>
           <Route path='/' component={Greeting} />
         </Switch>

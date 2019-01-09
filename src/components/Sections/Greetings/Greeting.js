@@ -11,7 +11,7 @@ return (
       <h1 className="display-4">Welcome to My React App</h1>
         <p className="lead intro">This App is a basic React App that I built to exercise my knowledge of this Framework/Library. This App features some of the core features of React like, rendering elements, using JSX to load components, component states and lifecycle hocks, routing, and redux. </p>
         <hr className="my-4" />
-        <p>Building an app is not easy. It takes a lot of work, study and practice specialy if you are new to the framework or language like me. In the end, if you have build awesome or not so awesome app, what is important is that you have learned a new language that you can use in your future project.</p>
+        <p>Building an app is not easy. It takes a lot of work, study and practice specially if you are new to the framework or language like me. In the end, what is important is that you have learned a new language that you can use in your future project.</p>
         <hr className="my-4" />
         <p>Thank you for taking time to look at my app.</p>
 

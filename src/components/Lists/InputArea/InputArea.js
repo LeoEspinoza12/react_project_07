@@ -49,8 +49,8 @@ class InputArea extends Component {
         amount: this.state.enteredPerson.amountEntered.value,
         time: time
       }
-    const entry = { ...this.state.enteredPerson }
     
+    this.setState({enteredPerson: validation(this.state.enteredPerson, 'sampState')})
     this.props.submitList(person)
   }
     
