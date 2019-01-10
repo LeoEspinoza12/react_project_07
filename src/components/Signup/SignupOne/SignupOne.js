@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Fragment from '../../../UI/Fragment'
 // import {Link} from 'react-router-dom'
 import Input from '../Input/Input'
-import validator from '../../../UI/Validation'
+import valid from '../../../UI/Validation/Validation'
 import './SignupOne.css'
 
 class Signup extends Component {
@@ -76,7 +76,7 @@ changeHandler = (e, input) =>{
   }
   const toBeUpdatedForm = updatedForm[input.toLowerCase()]
   toBeUpdatedForm.value = e.target.value
-  toBeUpdatedForm.valid = validator(toBeUpdatedForm.value, input)
+  toBeUpdatedForm.valid = valid(toBeUpdatedForm.value, input)
   this.setState({signupForm: updatedForm})
 }
 

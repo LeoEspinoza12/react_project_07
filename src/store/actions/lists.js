@@ -9,14 +9,17 @@ export const addList = (listItem) => {
 }
 
 export const removeList = (refNum) => {
-  return {
-    type: actionType.REMOVE_ITEM,
-    refNum: refNum
+  return(dispatch, getState)=>{
+
+    const sample = getState().listItems.totals
+    console.log(sample)
+    dispatch(getTotals(refNum))
   }
 }
 
-export const getTotals = () => {
+export const getTotals = (refNum) => {
   return {
-    type: actionType.GET_TOTALS
+    type: actionType.REMOVE_ITEM,
+    refNum: refNum
   }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Fragment from '../../../UI/Fragment'
 import InputItem from '../../../UI/InputItems'
-import validation from '../../../UI/Validation'
+import valid from '../../../UI/Validation/Validation'
 import {buttonSwitchHandler} from '../../../UI/Utils'
 import {withRouter} from 'react-router-dom'
 import './InputArea.css'
@@ -27,7 +27,7 @@ class InputArea extends Component {
 
     const changeEntry = entry[inputName]
     changeEntry.value = e.target.value
-    changeEntry.valid = validation(changeEntry.value, inputName)
+    changeEntry.valid = valid(changeEntry.value, inputName)
     
     let btnValues = []
     for(let key in entry){ 
@@ -50,7 +50,7 @@ class InputArea extends Component {
         time: time
       }
     
-    this.setState({enteredPerson: validation(this.state.enteredPerson, 'sampState')})
+    this.setState({enteredPerson: valid(this.state.enteredPerson, 'sampState')})
     this.props.submitList(person)
   }
     

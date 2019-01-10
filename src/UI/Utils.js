@@ -1,3 +1,7 @@
+export const GET_TOTALS = 'GET_TOTALS'
+
+
+
 export const message = (input, valid) => {
 
     let message = null
