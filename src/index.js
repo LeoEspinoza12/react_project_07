@@ -9,11 +9,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import inputs from './store/reducers/input'
+import auth from './store/reducers/auth'
 import lists from './store/reducers/lists'
 
 const rootReducer = combineReducers({
-  inputItem: inputs,
+  auth: auth,
   listItems: lists
 })
 

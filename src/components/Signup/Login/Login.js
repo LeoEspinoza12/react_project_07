@@ -3,14 +3,16 @@
 import React from 'react'
 import Fragment from '../../../UI/Fragment'
 import {Link} from 'react-router-dom'
-import './SignupTwo.css'
+import './Login.css'
 
-const SignupTwo = (props) => {
+const Login = (props) => {
 
 
   return (
     <Fragment>
-      <div className='container SignupTwo'>
+
+      <div className='container Login'>
+        <form action="">
         <h3>Account Address</h3>
         <div className="form-group">
           <label>Street #</label>
@@ -36,10 +38,11 @@ const SignupTwo = (props) => {
         <Link to='/'>
           <button type="submit" className="btn-sm btn-primary">Submit</button>
         </Link>
+        </form>
       </div>
     </Fragment>
   )
 }
 
 
-export default SignupTwo
+export default Login

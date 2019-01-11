@@ -3,7 +3,7 @@ import Fragment from '../../../UI/Fragment'
 // import {Link} from 'react-router-dom'
 import Input from '../Input/Input'
 import valid from '../../../UI/Validation/Validation'
-import './SignupOne.css'
+import './Signin.css'
 
 class Signup extends Component {
 
@@ -117,7 +117,7 @@ render(){
   
   return (
     <Fragment>
-      <div className='container SignupOne'>
+      <div className='container Signin'>
         <h3>Account Information</h3>
         {form}
 

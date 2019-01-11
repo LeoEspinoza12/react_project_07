@@ -1,5 +1,5 @@
 
-.SignupOne{
+.Signin{
   width: 50%;
   padding: 2.5em;
   background: rgb(253,235,231);
@@ -7,11 +7,11 @@
   box-shadow: 7px 7px 7px rgb(130, 130, 130)
 }
 
-.SignupOne h3{
+.Signin h3{
   text-align: center
 }
 
-.SignupOne button:disabled{
+.Signin button:disabled{
   background: rgb(220, 203, 199);
   border: 2px solid rgb(180,180,180)
 }

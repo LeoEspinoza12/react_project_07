@@ -5,3 +5,7 @@ export {
   removeList,
   getTotals
 } from './lists'
+
+export {
+  authStart
+} from './auth'
