@@ -7,5 +7,6 @@ export {
 } from './lists'
 
 export {
-  authStart
+  authSignup,
+  logout
 } from './auth'

@@ -1,21 +1,21 @@
-.SignupOne div label {
+.Signin div label {
   font-size: 0.91em;
 }
 
-.SignupOne div input {
+.Signin div input {
   font-size: 0.79em;
   box-shadow: 3px 3px 3px rgb(130, 130, 130);
 
 }
 
-.SignupOne small {
+.Signin small {
   font-size: 0.65em;
   color: rgb(245,28,28) !important;
   font-weight: 700;
   margin-bottom: 0 !important;
 }
 
-.SignupOne button {
+.Signin button {
   margin-top: 1em;
   font-size: 0.85em;
   width: 25%

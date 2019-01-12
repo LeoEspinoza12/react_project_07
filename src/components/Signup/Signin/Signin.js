@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 import Fragment from '../../../UI/Fragment'
-// import {Link} from 'react-router-dom'
 import Input from '../Input/Input'
+import {connect} from 'react-redux'
 import valid from '../../../UI/Validation/Validation'
 import './Signin.css'
+import * as actions from '../../../store/actions/index'
+import {Redirect} from 'react-router-dom'
 
 class Signup extends Component {
 
@@ -61,7 +63,12 @@ class Signup extends Component {
 submitHandler = (e) =>{
   // console.log(this.props)
   e.preventDefault()
-  this.props.history.push('/sign-up/address')
+  const data = {
+    username: 'manski',
+    email: this.state.signupForm.email.value,
+    password: this.state.signupForm.password.value
+  }
+  this.props.authSignUp(data, 'signup')
 }
 
 btnSubmit = (value) => {
@@ -81,6 +88,8 @@ changeHandler = (e, input) =>{
 }
 
 render(){
+
+ 
 
   let formInput = [];
   let btnvalues = []
@@ -118,7 +127,7 @@ render(){
   return (
     <Fragment>
       <div className='container Signin'>
-        <h3>Account Information</h3>
+        <h3>Signup</h3>
         {form}
 
 
@@ -128,5 +137,15 @@ render(){
   }
 }
 
+const mapStateToProps = (state, ownProps) => {
+  return {
+    token: state.auth.authToken
+  }
+}
 
-export default Signup
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    auth: (data) => {  dispatch(actions.auth(data)) }
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Signup)

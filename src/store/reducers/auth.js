@@ -1,25 +1,38 @@
+
 import * as actionType from '../actions/actions'
+import {updateObject} from '../../UI/Utils'
 
 const initialState = {
-    lists: [],
-    totals: [],
+  authToken: false,
+  userId: false,
+  isSignedUp: false
 }
 
-const authStart = () => {
-  console.log('we are in the same pages')
-  return true
+const authLoggedIn = (state, token, userId) => {
+  return updateObject( state, { 
+    authToken: token,
+    userId: userId } );  
+}
+const authSignedUp = (state, isSignedUp) => {
+  return updateObject(state, {
+    isSignedup: isSignedUp,
+  });
+}
+const authLogout = (state) => {
+  return updateObject(state, {
+    authToken: null,
+    userId: null
+  });
 }
 
-
-
-
-const auth = (state = initialState, action) => {
-  
+const authorization = (state = initialState, action) => {
   switch (action.type) {
-    case actionType.AUTH_START: return authStart()
+    case actionType.AUTH_SIGNEDUP: return authSignedUp(state, action.isSignedUp)
+    case actionType.AUTH_SUCCESS: return authLoggedIn(state, action.token, action.userId)
+    case actionType.AUTH_LOGOUT: return authLogout(state)
     default:
       return state
   }
 }
 
-export default auth
+export default authorization
