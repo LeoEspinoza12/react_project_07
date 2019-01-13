@@ -89,7 +89,9 @@ changeHandler = (e, input) =>{
 
 render(){
 
- 
+  if(this.props.isSignedUp){
+    return <Redirect to='/login'/>
+  }
 
   let formInput = [];
   let btnvalues = []
@@ -124,9 +126,18 @@ render(){
     </form>
   )
   
+  let message = null
+  if(this.props.error){
+    message = <div className="alert alert-danger" role="alert">
+                {this.props.error}
+              </div>
+
+  }
+
   return (
     <Fragment>
       <div className='container Signin'>
+        {message}
         <h3>Signup</h3>
         {form}
 
@@ -139,13 +150,14 @@ render(){
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    token: state.auth.authToken
+    isSignedUp: state.auth.isSignedUp,
+    error: state.auth.error
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    auth: (data) => {  dispatch(actions.auth(data)) }
+    authSignUp: (data, signup) => {  dispatch(actions.authSignUp(data, signup)) }
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Signup)

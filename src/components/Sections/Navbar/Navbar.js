@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 import './Navbar.css'
 import Fragment from '../../../UI/Fragment'
 import {connect} from 'react-redux'
-import * as actions from '../../../store/actions/index'
+// import * as actions from '../../../store/actions/index'
 
 class Navbar extends Component {
 
@@ -43,7 +43,6 @@ class Navbar extends Component {
                 </Fragment>
       }
 
-
     return (
       <Fragment>
 
@@ -72,10 +71,6 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-      auth: (text) => { dispatch(actions.auth(text)) }
-  }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
+
+export default connect(mapStateToProps)(Navbar)
