@@ -58,7 +58,7 @@ export const authSignUp = (data, signup) => {
 
 export const login =(email, password)=>{
   //  return dispatch => {
-  //   const url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyAkt1hAjv4eRGPWLydx32VG41FFdddzbzQ'
+  //   const url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key='
     
   //   const userdata = {
   //     email: email,
