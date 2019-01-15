@@ -93,13 +93,15 @@ export const login =(email, password)=>{
 
     axios.post('/manski/manski', userdata)
     .then(res => {
-      console.log(res.data.text)
-      if(res.status === 200){
-        const expirationDate = new Date(new Date().getTime() + res.data.expiresIn * 100)
-        localStorage.setItem('token', res.data.idToken);
-        localStorage.setItem('expirationDate', expirationDate)
-        localStorage.setItem('userId', res.data.localId)
-      }
+      console.log(res)
+      // console.log('redux response', res.status)
+      // console.log(res.data.text)
+      // if(res.status === 200){
+      //   const expirationDate = new Date(new Date().getTime() + res.data.expiresIn * 100)
+      //   localStorage.setItem('token', res.data.idToken);
+      //   localStorage.setItem('expirationDate', expirationDate)
+      //   localStorage.setItem('userId', res.data.localId)
+      // }
       dispatch(authSuccess(res.data.idToken, res.data.localId))
     })
     .catch(error => {

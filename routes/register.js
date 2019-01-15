@@ -1,17 +1,24 @@
 const express = require('express')
 const router = express.Router()
-
+const axios = require('axios')
 
 router.post('/manski', (req, res)=>{
-  const email = req.body.email
-  const password = req.body.password
+  const data = {
+    email: req.body.email,
+    password: req.body.password
+  }
+  console.log(data)
+    const url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key='
 
-  console.log(email, password, 'the data was received at the backend')
-  res.json({
-    text: 'the message was received',
-    idToken: 'this is the id token',
-    localId: 'you now have the local id'
-  })
+  axios.post(url, data)
+    .then(response => {
+      if (response.status === 200){
+        res.json(response.data)
+      } 
+    })
+    .catch(error=>{
+      return error.data
+    })
 })
 
 module.exports = router
